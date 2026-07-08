@@ -15,7 +15,7 @@ as they are developed. There is no application code yet; the repo is infrastruct
 
 - `docker-compose.yml` defines two services:
   - `db` — Postgres 16, credentials `odoo`/`odoo`, data persisted in the `db-data` volume.
-  - `odoo` — official `odoo:19.0` image, depends on `db`, exposed on host port `8069`.
+  - `odoo` — official `odoo:19.0` image, depends on `db`, exposed on host port `8070` (not `8069` — the v18 sibling project already occupies that port on this machine when both stacks run locally).
 - `odoo.conf` is bind-mounted into the container at `/etc/odoo/odoo.conf`. Its `addons_path`
   includes both `/mnt/extra-addons` (mapped from local `./addons`) and Odoo's built-in addons
   path. Any custom module placed in `./addons/<module_name>/` becomes available to Odoo without
@@ -45,7 +45,7 @@ docker compose restart odoo
 docker compose exec odoo bash
 ```
 
-Odoo is reachable at `http://localhost:8069` once the stack is up; the first run prompts for
+Odoo is reachable at `http://localhost:8070` once the stack is up; the first run prompts for
 database creation through the web UI.
 
 ## Notes for adding custom modules

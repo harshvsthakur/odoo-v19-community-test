@@ -16,8 +16,8 @@ tests → PR → release notes).
 docker compose up -d
 ```
 
-Odoo is reachable at `http://localhost:8069`. First run prompts for database creation through
-the web UI.
+Odoo is reachable at `http://localhost:8070` (not `8069` — the v18 sibling project uses that port
+when both stacks run locally). First run prompts for database creation through the web UI.
 
 ```bash
 # Follow logs

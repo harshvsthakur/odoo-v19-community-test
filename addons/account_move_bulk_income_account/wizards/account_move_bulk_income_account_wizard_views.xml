@@ -7,8 +7,7 @@
             <form>
                 <field name="move_id" invisible="1"/>
                 <group>
-                    <field name="income_account_id"
-                           domain="[('account_type', '=', 'income'), ('company_ids', 'in', move_id.company_id.ids)]"/>
+                    <field name="income_account_id"/>
                 </group>
                 <p class="text-muted">
                     This will overwrite the account on every line of this invoice.

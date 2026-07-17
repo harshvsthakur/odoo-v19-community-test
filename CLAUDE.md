@@ -85,12 +85,4 @@ personal — this is Harsh's own Odoo testbed ("Odoo v19 Community Test"), not a
 
 ## Ticket workflow for this project
 
-When asked to work on a ticket, the pipeline is:
-
-1. `ticket-requirements-analyst` (global) -- PRD, requires human approval before proceeding.
-2. `odoo-conventions:odoo-module-dev` (project-type plugin, shared across every Odoo project) -- the actual module code and Odoo-specific conventions.
-3. `qa-edge-case-tester` (global) -- testing, using the commands above.
-4. `code-change-workflow` (global) -- branch, PR, and (once approved) merge and deploy.
-5. `notion-ticket-sync` (global) -- after merge, if the PR is linked to a ticket.
-
-See `~/.claude/CLAUDE.md` for the process rules (Notion scope, activity logging, documentation standard, token efficiency, PR policy, Notion formatting) that apply throughout this pipeline.
+Standard global pipeline (see "The ticket pipeline" in `~/.claude/CLAUDE.md`); this project's build skill (step 2) is `odoo-conventions:odoo-module-dev`, the shared type-tier plugin.
